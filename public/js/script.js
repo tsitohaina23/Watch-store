@@ -76,7 +76,7 @@ function updateCart() {
             cartItem.innerHTML = `
                 <div class="cart-item-info">
                     <div class="cart-item-name">${item.name}</div>
-                    <div class="cart-item-price">${item.price.toFixed(2)} €</div>
+                    <div class="cart-item-price">${item.price.toFixed(2)} Ar</div>
                 </div>
                 <div class="cart-item-quantity">
                     <button class="quantity-btn decrease" data-id="${item.id}">-</button>

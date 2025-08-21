@@ -17,29 +17,29 @@ const products = [
   {
     id: 1,
     name: "Chronographe Élégance",
-    price: 499.99,
-    image: "/images/watch1.jpg",
+    price: 402000,
+    image: "/images/watch1.jpeg",
     description: "Une montre exceptionnelle avec chronographe et design raffiné."
   },
   {
     id: 2,
     name: "Automatique Prestige",
-    price: 799.99,
-    image: "/images/watch2.jpg",
+    price: 1200000,
+    image: "/images/watch2.jpeg",
     description: "Mouvement automatique suisse, cadran nacre et bracelet cuir."
   },
   {
     id: 3,
     name: "Sport Luxe",
-    price: 649.99,
-    image: "/images/watch3.jpg",
+    price: 853000,
+    image: "/images/watch3.jpeg",
     description: "Robuste et élégante, parfaite pour les occasions sportives et formelles."
   },
   {
     id: 4,
     name: "Minimaliste Classique",
-    price: 349.99,
-    image: "/images/watch4.jpg",
+    price: 250000,
+    image: "/images/watch4.jpeg",
     description: "Design épuré et intemporel pour un style toujours actuel."
   }
 ];
