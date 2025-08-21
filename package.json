@@ -1,7 +1,7 @@
 {
-  "name": "luxury-watch-ecommerce",
+  "name": "watch-store",
   "version": "1.0.0",
-  "description": "Un site e-commerce élégant pour montres de luxe",
+  "description": "Site e-commerce de montres de luxe",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,6 +12,6 @@
     "ejs": "^3.1.9"
   },
   "keywords": ["ecommerce", "watches", "luxury"],
-  "author": "Votre Nom",
+  "author": "Akartis",
   "license": "MIT"
 }
