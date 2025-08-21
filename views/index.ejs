@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Time - Montres de Luxe</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Luxury Time</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#products" class="nav-link">Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>L'Élégance du Temps</h1>
+            <p>Découvrez notre collection exclusive de montres de luxe</p>
+            <a href="#products" class="btn">Explorer la Collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Notre Collection</h2>
+            <div class="product-grid">
+                <% products.forEach(product => { %>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="<%= product.image %>" alt="<%= product.name %>">
+                    </div>
+                    <div class="product-info">
+                        <h3><%= product.name %></h3>
+                        <p class="product-desc"><%= product.description %></p>
+                        <p class="product-price"><%= product.price.toFixed(2) %> €</p>
+                        <button class="add-to-cart" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Luxury Time</h3>
+                    <p>Votre destination pour des montres d'exception depuis 2023.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#products">Produits</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>email@luxurytime.com</p>
+                    <p>+33 1 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Luxury Time. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Votre Panier</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items">
+                <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            </div>
+            <div class="cart-total">
+                <strong>Total: <span class="total-amount">0.00</span> €</strong>
+            </div>
+            <button class="checkout-btn">Procéder au Paiement</button>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
